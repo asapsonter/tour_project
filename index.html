@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<!-- hyphens 와 같은 css 적용시 사용 언어를 반영한다. -->
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<!-- 필수 meta for responsive design -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link
+			href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+			rel="stylesheet"
+		/>
+		<!-- <link rel="stylesheet" href="css/icon-fonts.css" /> -->
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+
+		<title>Natours | Exciting tours for adventurous people</title>
+	</head>
+	<body>
+		<div class="navigation">
+			<!-- input id와 label 일치-->
+			<input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
+			<label for="navi-toggle" class="navigation__button">
+				<!-- 메뉴 버튼  -->
+				<span class="navigation__icon">&nbsp;</span>
+			</label>
+
+			<div class="navigation__background">&nbsp;</div>
+
+			<nav class="navigation__nav">
+				<ul class="navigation__list">
+					<li class="navigation__item">
+						<a href="#" class="navigation__link">About Natours</a>
+					</li>
+					<li class="navigation__item">
+						<a href="#" class="navigation__link">Your Benefits</a>
+					</li>
+					<li class="navigation__item">
+						<a href="#" class="navigation__link">Popular tours</a>
+					</li>
+					<li class="navigation__item">
+						<a href="#" class="navigation__link">Stories</a>
+					</li>
+					<li class="navigation__item">
+						<a href="#" class="navigation__link">Book now</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<header class="header">
+			<div class="header__logo-box">
+				<img src="img/logo-white.png" alt="Logo" class="header__logo" />
+			</div>
+			<div class="header__text-box">
+				<!-- 다른곳에서 쓸수 있는 h1태그이기 때문에 stand alone block -->
+				<h1 class="heading-primary">
+					<!-- seo 엔진을 고려해서 h1에 타이틀을 넣되 span 분리를 통해서 스타일을 달리함 -->
+					<span class="heading-primary--main">Outdoors</span>
+					<span class="heading-primary--sub">is where life happens</span>
+				</h1>
+				<a href="#section-tours" class="btn btn--white btn--animated"
+					>Discover our tours</a
+				>
+			</div>
+		</header>
+		<main>
+			<section class="section-about">
+				<div class="u-center-text u-margin-bottom-8">
+					<h2 class="heading-secondary">
+						Exciting tours for adventurous People
+					</h2>
+				</div>
+				<div class="row">
+					<div class="col-1-of-2">
+						<h3 class="heading-tertiary u-margin-bottom-sm">
+							You're goint to fall in lover with nature
+						</h3>
+						<p class="paragraph">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
+							maxime et temporibus iusto ratione exercitationem eum nesciunt,
+							saepe quasi! Ullam distinctio eveniet quasi molestiae excepturi.
+						</p>
+						<h3 class="heading-tertiary u-margin-bottom-sm">
+							LIVE ADVENTURES LIKE YOU NEVER HAVE BEFORE
+						</h3>
+						<p class="paragraph">
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel hic
+							saepe pariatur sunt veniam? Molestias.
+						</p>
+						<a href="#" class="btn-text">Learn More &rarr;</a>
+					</div>
+					<div class="col-1-of-2">
+						<div class="composition">
+							<!-- Resolution Switching - imform browser to the width of the images. -->
+							<!--
+							Note 정리
+							<img
+								-- 1) Step1: 두 버전의 이미지를 크키별로 설정 300px일 경우와 1000px일 경우에 보여줄 이미지 
+								srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+								-- 2) Step2: 900px 이하일경우 20%로, 600일때는 30퍼센트로 보여준다. 그외는 300px을 기본으로 하는듯?  
+								sizes="(max-width: 900px) 20vw, (max-width:600px) 30vw, max-width: 300px"
+								alt="Photo 1"
+								class="composition__photo composition__photo--p1"
+								srcset을 인식하지 못할경우 사용할 이미지
+								src="img/nat-1-large.jpg"
+							/>
+							-->
+
+							<img
+								srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+								sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, max-width: 300px"
+								alt="Photo 1"
+								class="composition__photo composition__photo--p1"
+								src="img/nat-1-large.jpg"
+							/>
+							<img
+								srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+								sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, max-width: 300px"
+								alt="Photo 2"
+								class="composition__photo composition__photo--p2"
+								src="img/nat-2-large.jpg"
+							/>
+							<img
+								srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+								sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, max-width: 300px"
+								alt="Photo 3"
+								class="composition__photo composition__photo--p3"
+								src="img/nat-3-large.jpg"
+							/>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section-features">
+				<div class="row">
+					<div class="col-1-of-4">
+						<div class="feature-box">
+							<i class="feature-box__icon icon-basic-world"></i>
+							<h3 class="heading-tertiary">Explore the world</h3>
+							<p class="feature-box__text">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								Itaque, odit.
+							</p>
+						</div>
+					</div>
+					<div class="col-1-of-4">
+						<div class="feature-box">
+							<i class="feature-box__icon icon-basic-compass"></i>
+							<h3 class="heading-tertiary">Meet nature</h3>
+							<p class="feature-box__text">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								Itaque, odit.
+							</p>
+						</div>
+					</div>
+					<div class="col-1-of-4">
+						<div class="feature-box">
+							<i class="feature-box__icon icon-basic-map"></i>
+							<h3 class="heading-tertiary">Find your way</h3>
+							<p class="feature-box__text">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								Itaque, odit.
+							</p>
+						</div>
+					</div>
+					<div class="col-1-of-4">
+						<div class="feature-box">
+							<i class="feature-box__icon icon-basic-heart"></i>
+							<h3 class="heading-tertiary">Explore the world</h3>
+							<p class="feature-box__text">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								Itaque, odit.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section-tours" id="section-tours">
+				<div class="u-center-text u-margin-bottom-big">
+					<h2 class="heading-secondary">Most Popular Tours</h2>
+				</div>
+				<div class="row">
+					<div class="col-1-of-3">
+						<div class="card">
+							<div class="card__side card__side--front">
+								<div class="card__picture card__picture--1">&nbsp;</div>
+								<h4 class="card__heading">
+									<!-- 이건 card__heading의 child라기보단 heading-sepan 이라는 개별적인 element로 취급해야한다. -->
+									<span class="card__heading-span card__heading-span--1"
+										>The Sea Explorer</span
+									>
+								</h4>
+								<div class="card__details">
+									<ul>
+										<li>3 day tours</li>
+										<li>Up to 30 people</li>
+										<li>2 tour guides</li>
+										<li>Sleep in cozy hotels</li>
+										<li>difficulty: easy</li>
+									</ul>
+								</div>
+							</div>
+							<div class="card__side card__side--back card__side--back-1">
+								<div class="card__cta">
+									<div class="card__price-box">
+										<p class="card__price-only">Only</p>
+										<p class="card__price-value">$297</p>
+									</div>
+									<a href="#popup" class="btn btn--white">Book now!</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-1-of-3">
+						<div class="card">
+							<div class="card__side card__side--front">
+								<div class="card__picture card__picture--2">&nbsp;</div>
+								<h4 class="card__heading">
+									<!-- 이건 card__heading의 child라기보단 heading-sepan 이라는 개별적인 element로 취급해야한다. -->
+									<span class="card__heading-span card__heading-span--2"
+										>The Forest Hiker</span
+									>
+								</h4>
+								<div class="card__details">
+									<ul>
+										<li>7 day tours</li>
+										<li>Up to 40 people</li>
+										<li>6 tour guides</li>
+										<li>Sleep in provided tents</li>
+										<li>difficulty: medium</li>
+									</ul>
+								</div>
+							</div>
+							<div class="card__side card__side--back card__side--back-2">
+								<div class="card__cta">
+									<div class="card__price-box">
+										<p class="card__price-only">Only</p>
+										<p class="card__price-value">$297</p>
+									</div>
+									<a href="#popup" class="btn btn--white">Book now!</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-1-of-3">
+						<div class="card">
+							<div class="card__side card__side--front">
+								<div class="card__picture card__picture--3">&nbsp;</div>
+								<h4 class="card__heading">
+									<!-- 이건 card__heading의 child라기보단 heading-sepan 이라는 개별적인 element로 취급해야한다. -->
+									<span class="card__heading-span card__heading-span--3">
+										The Snow Adventurer
+									</span>
+								</h4>
+								<div class="card__details">
+									<ul>
+										<li>5 day tours</li>
+										<li>Up to 15 people</li>
+										<li>3 tour guides</li>
+										<li>Sleep in provided tents</li>
+										<li>difficulty: hard</li>
+									</ul>
+								</div>
+							</div>
+							<div class="card__side card__side--back card__side--back-3">
+								<div class="card__cta">
+									<div class="card__price-box">
+										<p class="card__price-only">Only</p>
+										<p class="card__price-value">$297</p>
+									</div>
+									<a href="#popup" class="btn btn--white">Book now!</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="u-center-text u-margin-top-huge">
+					<a href="" class="btn btn--green">Discover all tours</a>
+				</div>
+			</section>
+			<section class="section-stories">
+				<div class="bg-video">
+					<video class="bg-video__content" autoplay muted loop>
+						<source src="img/video.mp4" type="video/mp4" />
+						<source src="img/video.webm" type="video/webm" />
+						Your Browser is not supported!
+					</video>
+				</div>
+				<div class="u-center-text u-margin-bottom-lg">
+					<h2 class="heading-secondary">We make people genuinely happy.</h2>
+				</div>
+				<div class="row">
+					<div class="story">
+						<figure class="story__shape">
+							<img
+								src="../img/nat-8.jpg"
+								alt="A person on a tour"
+								class="story__img"
+							/>
+							<figurecaption class="story__caption">Mary Smith</figurecaption>
+						</figure>
+						<div class="story__text">
+							<h3 class="heading-tertiary u-margin-bottom-sm">
+								I had the best week ever with my family
+							</h3>
+							<p>
+								Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+								Temporibus quaerat praesentium non iusto vitae nostrum ab eius
+								culpa iure dolorum. Maxime aperiam blanditiis et alias porro
+								consequatur laborum tempore nesciunt.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="story">
+						<figure class="story__shape">
+							<img
+								src="../img/nat-9.jpg"
+								alt="A person on a tour"
+								class="story__img"
+							/>
+							<figurecaption class="story__caption">Jack Wilson</figurecaption>
+						</figure>
+						<div class="story__text">
+							<h3 class="heading-tertiary u-margin-bottom-sm">
+								Wow! My life is completely different NOW!
+							</h3>
+							<p>
+								Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+								Temporibus quaerat praesentium non iusto vitae nostrum ab eius
+								culpa iure dolorum. Maxime aperiam blanditiis et alias porro
+								consequatur laborum tempore nesciunt.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="u-center-text u-margin-top-huge">
+					<a href="#" class="btn-text">Read all stories &rarr;</a>
+				</div>
+			</section>
+			<section class="section-book">
+				<div class="row">
+					<div class="book">
+						<div class="book__form">
+							<form action="#" class="form">
+								<div class="u-margin-bottom-md">
+									<h2 class="heading-secondary">Start booking now</h2>
+								</div>
+								<div class="form__group">
+									<input
+										type="text"
+										class="form__input"
+										id="name"
+										placeholder="Full Name"
+										autocomplete="off"
+										required
+									/>
+									<label for="" class="form__label">Full name</label>
+								</div>
+								<div class="form__group">
+									<input
+										type="email"
+										class="form__input"
+										id="email"
+										placeholder="Email address"
+										autocomplete="off"
+										required
+									/>
+
+									<label for="email" class="form__label">Email Address</label>
+								</div>
+								<div class="form__group">
+									<div class="form__radio-group">
+										<!-- 같은 이름으로 걸어줘야 한버튼씩 선택가능 - 객관식? -->
+										<input
+											type="radio"
+											class="form__radio-input"
+											id="small"
+											name="size"
+										/>
+										<label for="small" class="form__radio-label">
+											<!-- Deco 용 span: 원래 버튼을 사용하지 않고 span으로 만든 버튼으로 연결 -->
+											<span class="form__radio-button"></span>
+											Small tour group
+										</label>
+									</div>
+									<div class="form__radio-group">
+										<input
+											type="radio"
+											class="form__radio-input"
+											id="large"
+											name="size"
+										/>
+										<label for="large" class="form__radio-label">
+											<span class="form__radio-button"></span>
+											Large tour group
+										</label>
+									</div>
+								</div>
+								<div class="form__group u-margin-top-sm">
+									<button class="btn btn--green">Next step &rarr;</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__logo-box">
+				<picture class="footer__logo">
+					<!-- Art Direction - different images with different viewport source. -->
+					<source
+						srcset="
+							img/logo-green-small-1x.png 1x,
+							img/logo-green-small-2x.png 2x
+						"
+						media="(max-width: 37.5em)"
+					/>
+					<img
+						srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x"
+						alt="Full logo"
+						class="footer__logo"
+					/>
+				</picture>
+				<!-- Density Switching - high-resolution choice 만들기: 레티나 등 고해상도에서 높은 픽셀 사용 -->
+				<!-- <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x," alt="Full logo" class="footer__logo" /> -->
+			</div>
+			<div class="row">
+				<div class="col-1-of-2">
+					<div class="footer__navigation">
+						<ul class="footer__list">
+							<li class="footer__item">
+								<a href="#" class="footer__link">Company</a>
+							</li>
+							<li class="footer__item">
+								<a href="#" class="footer__link">Contact us</a>
+							</li>
+							<li class="footer__item">
+								<a href="#" class="footer__link">Carrers</a>
+							</li>
+							<li class="footer__item">
+								<a href="#" class="footer__link">Private Policy</a>
+							</li>
+							<li class="footer__item">
+								<a href="#" class="footer__link">Terms</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-1-of-2">
+					<p class="footer__copyright">
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum
+						amet,
+						<a href="#" class="footer__link"
+							>&copy; Rafy. All rights reserved.
+						</a>
+						tempora maxime aliquid voluptas numquam similique recusandae
+						reprehenderit quis exercitationem animi, consequuntur voluptatem ad
+						corrupti voluptates et, debitis aliquam quia. credit to
+						<a href="#" class="footer__link">Jonas Class at Udemy.</a>
+					</p>
+				</div>
+			</div>
+		</footer>
+		<div class="popup" id="popup">
+			<div class="popup__content">
+				<div class="popup__box">
+					<div class="popup__left">
+						<img class="popup__img" src="/img/nat-8.jpg" alt="Tour photo" />
+						<img class="popup__img" src="/img/nat-9.jpg" alt="Tour photo" />
+					</div>
+
+					<div class="popup__right">
+						<a href="#section-tours" class="popup__close"> &times; </a>
+
+						<h2 class="heading-secondary u-margin-bottom-sm">
+							Start booking now
+						</h2>
+						<h2 class="heading-tertiary u-margin-bottom-xs">
+							Important &ndash; please read these terms before booking
+						</h2>
+						<p class="popup__text">
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga,
+							porro perspiciatis! Impedit mollitia quibusdam ipsum eveniet
+							veniam molestiae. Reprehenderit error fugiat obcaecati consectetur
+							quidem nihil doloribus molestias nisi ut eveniet at dolorem nam
+							cupiditate optio, doloremque vitae. Eligendi ut labore expedita,
+							maiores possimus et quibusdam consequuntur laudantium facilis
+							aperiam laboriosam animi quae quos ab aliquid, asperiores sint
+							quaerat tempore eos, nesciunt ratione iure molestias inventore
+							magnam! Incidunt ipsum totam nam?
+						</p>
+						<a href="#" class="btn btn--green">Book now</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- <section class="grid-test">
+			<div class="row">
+				<div class="col-1-of-2">col-1-of-2</div>
+				<div class="col-1-of-2">col-1-of-2</div>
+			</div>
+            <div class="row">
+                <div class="col-1-of-3">col-1-of-3</div>
+                <div class="col-1-of-3">col-1-of-3</div>
+                <div class="col-1-of-3">col-1-of-3</div>
+            </div>
+            <div class="row">
+                <div class="col-1-of-3">col-1-of-3</div>
+                <div class="col-2-of-3">col-2-of-3</div>
+            </div>
+            <div class="row">
+				<div class="col-1-of-4">col-1-of-4</div>
+				<div class="col-1-of-4">col-1-of-4</div>
+				<div class="col-1-of-4">col-1-of-4</div>
+                <div class="col-1-of-4">col-1-of-4</div>
+			</div>
+			<div class="row">
+				<div class="col-1-of-4">col-1-of-4</div>
+				<div class="col-1-of-4">col-1-of-4</div>
+				<div class="col-2-of-4">col-2-of-4</div>
+			</div>
+            <div class="row">
+				<div class="col-1-of-4">col-1-of-4</div>
+				<div class="col-3-of-4">col-3-of-4</div>
+			</div>
+		</section>
+         -->
+	</body>
+</html>
